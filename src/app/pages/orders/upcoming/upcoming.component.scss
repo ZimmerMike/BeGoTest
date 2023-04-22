@@ -1,7 +1,12 @@
 .header {
     width: 83%;
+    max-width: 600px;
     margin: 7em auto 2em auto;
     color: white;
+}
+
+.screen-title {
+    font-size: 18px;
 }
 
 .icon-button {
@@ -11,6 +16,7 @@
 
 .search-container {
     width: 83%;
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -46,4 +52,124 @@
     color: white;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.upcoming-data-container {
+    width: 83%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.order-card {
+    margin-top: 40px;
+}
+
+.order-card-title {
+    font-weight: 300;
+}
+
+.card-content-header {
+    padding: 16px;
+}
+
+.order-type img {
+    margin-right: 12px;
+}
+
+.order-card-content {
+    border-radius: 25px;
+    background: linear-gradient(45deg, #080C0F 0%, rgba(39,39,39,0) 100%);
+    border: 1px solid #252525;
+    width: 100%;
+    height: 292px;
+    position: relative;
+}
+
+.order-card-divider {
+    border: 1px solid #252525;
+    margin: 0px;
+}
+
+.buttons-container {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.resume-button {
+    height: 43.87px;
+    width: 130px;
+    border: none;
+    border-radius: 21.93px;
+    background-color: #FFFF00;
+    box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
+    font-size: 14px;
+    font-weight: 900;
+    float: right;
+    font-family: 'Open Sans';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.pickup-action-button {
+    height: 50px;
+    width: 199px;
+    border: none;
+    border-radius: 0 25px 25px 25px;
+    background: linear-gradient(45deg, #080C0F 0%, rgba(38,38,38,0.64) 100%);  
+    float: left;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Open Sans';
+}
+
+.eye-icon {
+    margin: auto 10px;
+}
+
+.pickup-to-dropoff-container {
+    float: left;
+    height: 102px;
+    width: 26px;
+    margin-top: 49px;
+    margin-left: 20px;
+}
+
+.vertical-line {
+    border-left: 2px solid #252525;
+    border-image: linear-gradient(180deg, #7B7B7B, transparent) 1 100%;
+    height: 40px;
+    margin-top: 12.67px;
+    margin-left: 13px;
+    margin-bottom: 11.5px;
+    margin-right: 12px;
+}
+
+.dropoff-marker {
+    margin: 0px 5px;
+}
+
+.address-data-container {
+    height: 122px;
+    width: 221px;
+}
+
+.pickup-title {
+    font-size: 10px;
+    color: #7B7B7B;
+}
+
+.dropoff-title {
+    font-size: 10px;
+    color: #7B7B7B;
+}
+
+.pickup-address {
+    font-size: 14px;
+}
+
+.dropoff-address {
+    font-size: 14px;
 }

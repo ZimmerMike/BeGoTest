@@ -1,17 +1,22 @@
-import {Injectable} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Upcoming, UpcomingResponse } from '../interfaces/interfaces';
 
 @Injectable()
 export class QueryService {
     constructor(
-        private http: HttpClient
     ) { }
 
-    public requestUpcoming() {
-        return this.http.get('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders/upcoming');
+    /**
+     * @description Executes request to get upcoming data from URL provided
+     * @returns {Array<Upcoming>} - Upcoming data
+     */
+    public async requestUpcoming(): Promise<Array<Upcoming>> {
+        return fetch('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders/upcoming')
+            .then(response => response.json())
+            .then((data: UpcomingResponse) => { return data.result });
     }
 
-    public requestOrders() {
-        return this.http.get<any>('https://129bc152-6319-4e38-b755-534a4ee46195.mock.pstmn.io/orders');
+    public async requestOrders() {
+
     }
 }
