@@ -1,6 +1,5 @@
 .header {
-    width: 83%;
-    max-width: 600px;
+    width: 350px;
     margin: 7em auto 2em auto;
     color: white;
 }
@@ -15,8 +14,7 @@
 }
 
 .search-container {
-    width: 83%;
-    max-width: 600px;
+    width: 350px;
     margin: 0 auto;
 }
 
@@ -55,8 +53,7 @@
 }
 
 .upcoming-data-container {
-    width: 83%;
-    max-width: 600px;
+    width: 350px;
     margin: 0px auto;
 }
 
@@ -110,6 +107,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .pickup-action-button {
@@ -117,7 +115,7 @@
     width: 199px;
     border: none;
     border-radius: 0 25px 25px 25px;
-    background: linear-gradient(45deg, #080C0F 0%, rgba(38,38,38,0.64) 100%);  
+    background: linear-gradient(45deg, #080C0F 0%, rgba(38,38,38,0.64) 100%);
     float: left;
     color: white;
     font-size: 14px;
@@ -133,8 +131,9 @@
     float: left;
     height: 102px;
     width: 26px;
-    margin-top: 49px;
-    margin-left: 20px;
+    margin-top: 13px;
+    margin-left: 0px;
+    margin-bottom: 7px;
 }
 
 .vertical-line {
@@ -151,25 +150,36 @@
     margin: 0px 5px;
 }
 
-.address-data-container {
-    height: 122px;
+.address-container {
+  margin-top: 36px;
+  margin-left: 40px;
+  width: 271px;
+  height: 49px;
+}
+
+.dropoff-container {
+  margin-top: 25px !important;
+}
+
+.address-title {
+    font-size: 10px;
+    color: #7B7B7B;
+    margin: 0px;
+}
+
+.address-nickname {
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.address {
     width: 221px;
-}
-
-.pickup-title {
-    font-size: 10px;
-    color: #7B7B7B;
-}
-
-.dropoff-title {
-    font-size: 10px;
-    color: #7B7B7B;
-}
-
-.pickup-address {
+    height: 37px;
     font-size: 14px;
-}
-
-.dropoff-address {
-    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0px;
 }

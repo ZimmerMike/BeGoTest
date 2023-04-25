@@ -1,72 +1,83 @@
 <div class="header">
-    <mat-grid-list cols="10">
-        <mat-grid-tile colspan="1">
-            <button class="icon-button">
-                <img src="../../../../assets/angle-small-down.svg" alt="back">
-            </button>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="8">
-            <h3 class="screen-title">Upcoming</h3>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="1">
-            <button class="icon-button">
-                <img src="../../../../assets/bell.svg" alt="notifications">
-            </button>
-        </mat-grid-tile>
-    </mat-grid-list>
+  <mat-grid-list cols="10">
+    <mat-grid-tile colspan="1">
+      <button class="icon-button">
+        <img src="../../../../assets/angle-small-down.svg" alt="back" />
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="8">
+      <h3 class="screen-title">Upcoming</h3>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <button class="icon-button">
+        <img src="../../../../assets/bell.svg" alt="notifications" />
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
 
 <div class="search-container">
-    <form>
-        <mat-form-field class="search-bar">
-            <div class="search-icon">
-                <img src="../../../../assets/search.svg" alt="search">
-            </div>
-            <input matInput class="search-bar-input">
-            <mat-label class="search-label">Search..</mat-label>
-        </mat-form-field>
-    </form>
+  <form>
+    <mat-form-field class="search-bar">
+      <div class="search-icon">
+        <img src="../../../../assets/search.svg" alt="search" />
+      </div>
+      <input matInput class="search-bar-input" />
+      <mat-label class="search-label">Search..</mat-label>
+    </mat-form-field>
+  </form>
 </div>
 
 <div class="upcoming-data-container">
-    <div class="order-card" *ngFor="let card of upcomingData">
-        <h3 class="order-card-title">
-            Order <b>#{{ card.order_number }}</b>
-        </h3>
-        <div class="order-card-content">
-            <div class="card-content-header">
-                <div class="order-type" *ngIf="card.type === 'FCL'">
-                    <img src="../../../../assets/freight.svg" alt="FCL">{{ card.type }}
-                </div>
-                <div class="order-type" *ngIf="card.type === 'FTL'">
-                    <img src="../../../../assets/container-truck.svg" alt="FTL">{{ card.type }}
-                </div>
-            </div>
-            <hr class="order-card-divider">
-            <div class="pickup-to-dropoff-container">
-                <img src="../../../../assets/Group 2.svg" alt="truck">
-                <div class="vertical-line"></div>
-                <img class="dropoff-marker" src="../../../../assets/marker.svg" alt="marker">
-            </div>
-            <div class="address-data-container">
-                <div class="pickup-container">
-                    <h6 class="pickup-title">PICKUP</h6>
-                    <div class="pickup-address">
-                        {{card.destinations[0].address}}
-                    </div>
-                </div>
-                <div class="dropoff-container">
-                    <h6 class="dropoff-title">DROPOFF</h6>
-                    <div class="dropoff-address">
-                        {{card.destinations[1].address}}
-                    </div>
-                </div>
-            </div>
-            <div class="buttons-container">
-                <button class="pickup-action-button">Start pickup</button>
-                <button class="resume-button">Resume <img class="eye-icon" src="../../../../assets/eye.svg" alt="eye"></button>
-            </div>
+  <div class="order-card" *ngFor="let card of upcomingData">
+    <h3 class="order-card-title">
+      Order <b>#{{ card.order_number }}</b>
+    </h3>
+    <div class="order-card-content">
+      <div class="card-content-header">
+        <div class="order-type" *ngIf="card.type === 'FCL'">
+          <img src="../../../../assets/freight.svg" alt="FCL" />{{ card.type }}
         </div>
-        <div></div>
+        <div class="order-type" *ngIf="card.type === 'FTL'">
+          <img src="../../../../assets/container-truck.svg" alt="FTL" />{{
+            card.type
+          }}
+        </div>
+      </div>
+      <hr class="order-card-divider" />
+      <div style="width: 311px; height: 122px; margin: 36px auto">
+        <div class="pickup-to-dropoff-container">
+          <img src="../../../../assets/Group 2.svg" alt="truck" />
+          <div class="vertical-line"></div>
+          <img
+            class="dropoff-marker"
+            src="../../../../assets/marker.svg"
+            alt="marker"
+          />
+        </div>
+        <div class="address-container">
+          <h6 class="address-title">PICKUP</h6>
+          <div class="address">
+            <h3 class="address-nickname">{{ card.destinations[0].nickname }}</h3>
+            <p class="address">{{ card.destinations[0].address }}</p>
+          </div>
+        </div>
+        <div class="address-container dropoff-container">
+          <h6 class="address-title">DROPOFF</h6>
+          <div>
+            <h3 class="address-nickname">{{ card.destinations[1].nickname }}</h3>
+            <p class="address">{{ card.destinations[1].address }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button class="pickup-action-button">Start pickup</button>
+        <button class="resume-button">
+          Resume
+          <img class="eye-icon" src="../../../../assets/eye.svg" alt="eye" />
+        </button>
+      </div>
     </div>
+    <div></div>
+  </div>
 </div>
