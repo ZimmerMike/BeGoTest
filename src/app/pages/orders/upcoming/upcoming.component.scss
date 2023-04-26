@@ -66,11 +66,55 @@
 }
 
 .card-content-header {
-    padding: 16px;
+  margin-top: 15px;
+  height: 31px;
+}
+
+.order-type {
+  height: 100%;
+  float: left;
+  margin-left: 17px;
+}
+
+.order-type::content {
+  margin-top: 0px;
+  margin-bottom: auto;
+  height: fit-content;
 }
 
 .order-type img {
-    margin-right: 12px;
+  margin-right: 12px;
+}
+
+.order-status {
+  display: flex;
+  float: right;
+  font-size: 12px;
+  height: 100%;
+}
+
+.order-status::content {
+  margin-top: 0px;
+  margin-bottom: auto;
+  margin-right: 28.34px;
+}
+
+.blue-dot-bg {
+  margin-top: 2px;
+  margin-right: 5px;
+  height: 11px;
+  width: 11px;
+  border-radius: 100%;
+  background-color: #0394FF;
+}
+
+.grey-dot-bg {
+  margin-top: 2px;
+  margin-right: 5px;
+  height: 11px;
+  width: 11px;
+  border-radius: 100%;
+  background-color: #989898;
 }
 
 .order-card-content {
@@ -100,14 +144,29 @@
     border-radius: 21.93px;
     background-color: #FFFF00;
     box-shadow: inset -2px -2px 4px 0 #C2C200, inset 2px 2px 4px 0 #FFFF80;
-    font-size: 14px;
-    font-weight: 900;
     float: right;
-    font-family: 'Open Sans';
     position: absolute;
     bottom: 0;
     right: 0;
     cursor: pointer;
+    display: flex;
+}
+
+.resume-button-text {
+  color: black;
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 7px;
+}
+
+.eye-icon {
+  margin-top: 14.7px;
+  margin-bottom: 13.6px;
+  margin-left: 7px;
+  margin-right: auto;
 }
 
 .pickup-action-button {
@@ -120,11 +179,6 @@
     color: white;
     font-size: 14px;
     font-weight: 900;
-    font-family: 'Open Sans';
-}
-
-.eye-icon {
-    margin: auto 10px;
 }
 
 .pickup-to-dropoff-container {
@@ -161,10 +215,15 @@
   margin-top: 25px !important;
 }
 
+.address-container > div {
+  margin-top: 0px;
+}
+
 .address-title {
     font-size: 10px;
     color: #7B7B7B;
     margin: 0px;
+    width: fit-content;
 }
 
 .address-nickname {
@@ -172,14 +231,42 @@
   font-weight: 300;
   font-weight: bold;
   margin: 0px;
+  width: fit-content;
 }
 
 .address {
-    width: 221px;
+    width: 181px;
     height: 37px;
     font-size: 14px;
-    text-overflow: ellipsis;
+    text-overflow: '..';
     white-space: nowrap;
     overflow: hidden;
     margin: 0px;
+}
+
+.date-time-container {
+  height: 100%;
+  width: fit-content;
+  float: right;
+  margin-top: -57px !important;
+  display: inline;
+  text-align: right;
+}
+
+.date-text {
+  font-size: 12px;
+  height: 10px;
+  width: 57.66px;
+  color: #979797;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.time-text {
+  margin-top: 7px;
+  margin-right: 0px;
+  margin-left: auto;
+  font-size: 14px;
+  height: 11px;
+  width: 38px;
 }
